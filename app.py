@@ -183,7 +183,7 @@ with tab_signals:
         return colors.get(val, "")
 
     st.dataframe(
-        df.style.applymap(_direction_style, subset=["Direction"]).format({"Fold Δ": "{:.2f}", "Score": "{:.3f}"}),
+        df.style.map(_direction_style, subset=["Direction"]).format({"Fold Δ": "{:.2f}", "Score": "{:.3f}"}),
         use_container_width=True,
         height=520,
     )
