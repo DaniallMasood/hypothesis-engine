@@ -1,0 +1,121 @@
+triple_id,subject_id,subject_name,predicate,object_id,object_name,confidence,evidence_type,pmid,module,notes
+T001,BM001,Increased IL-6 level,activates,PATH001,JAK-STAT signaling,high,experimental,PMID:34062244,immune_inflammation,IL-6 binds IL-6R and activates JAK1/JAK2 leading to STAT3 phosphorylation
+T002,BM001,Increased IL-6 level,activates,PATH002,NF-kB inflammatory pathway,high,experimental,PMID:34062244,immune_inflammation,IL-6 cross-activates NF-kB through IL-6R trans-signaling
+T003,BM002,Increased TNF-alpha level,activates,PATH002,NF-kB inflammatory pathway,high,experimental,PMID:33971154,immune_inflammation,TNF-alpha is the canonical activator of NF-kB via TNFR1
+T004,BM002,Increased TNF-alpha level,activates,PATH009,Microglial activation,high,experimental,PMID:33971154,neuroinflammation,Peripheral TNF-alpha crosses BBB and activates CNS microglia
+T005,BM003,Increased hsCRP level,associated_with,COND001,Long COVID,high,clinical,PMID:34062244,immune_inflammation,Elevated hsCRP co-occurs with systemic inflammation in Long COVID
+T006,BM001,Increased IL-6 level,associated_with,COND001,Long COVID,high,clinical,PMID:34062244,immune_inflammation,IL-6 elevation is one of the most replicated findings in Long COVID
+T007,BM023,Increased IL-6 level - prognostic,predicts_severity_of,COND001,Long COVID,high,clinical,PMID:34062244,immune_inflammation,Persistently elevated IL-6 at 6 months predicts ongoing Long COVID severity
+T008,GENE004,IL6,encodes,BM001,Increased IL-6 level,high,curated,,immune_inflammation,IL6 gene product is the assessed entity in BM001
+T009,GENE003,TNFA,encodes,BM002,Increased TNF-alpha level,high,curated,,immune_inflammation,TNFA gene product is the assessed entity in BM002
+T010,PATH001,JAK-STAT signaling,mechanism_of,COND001,Long COVID,high,experimental,PMID:34062244,immune_inflammation,Persistent JAK-STAT activation drives chronic inflammation in Long COVID
+T011,PATH002,NF-kB inflammatory pathway,mechanism_of,COND001,Long COVID,high,experimental,PMID:33971154,immune_inflammation,NF-kB activation sustains cytokine loop in Long COVID
+T012,BM024,Increased interferon-gamma level,activates,PATH010,T cell exhaustion,high,experimental,PMID:34237774,viral_persistence,Chronic IFN-gamma signaling drives T cell exhaustion in persistent viral antigen exposure
+T013,BM006,Decreased NK cell activity,associated_with,COND001,Long COVID,high,clinical,PMID:34237774,viral_persistence,NK cell dysfunction is a consistent feature of Long COVID immune exhaustion
+T014,BM006,Decreased NK cell activity,associated_with,COND005,ME/CFS,high,clinical,PMID:34237774,viral_persistence,NK cell activity reduction is a hallmark biomarker in ME/CFS
+T015,BM018,Presence of spike protein in blood,activates,PATH010,T cell exhaustion,moderate,experimental,PMID:35610328,viral_persistence,Persistent spike antigen chronically stimulates T cells leading to exhaustion
+T016,BM018,Presence of spike protein in blood,activates,PATH002,NF-kB inflammatory pathway,moderate,experimental,PMID:35610328,viral_persistence,Circulating spike protein activates TLR4 and downstream NF-kB signaling
+T017,BM018,Presence of spike protein in blood,diagnostic_of,COND001,Long COVID,moderate,clinical,PMID:35610328,viral_persistence,Spike antigenemia found in subset of Long COVID patients supports reservoir hypothesis
+T018,PATH010,T cell exhaustion,mechanism_of,COND005,ME/CFS,high,experimental,PMID:34237774,viral_persistence,T cell exhaustion is a proposed mechanism linking viral triggers to ME/CFS
+T019,BM025,Decreased IL-10 level,associated_with,COND001,Long COVID,moderate,clinical,PMID:34237774,immune_inflammation,Failure of IL-10-mediated immune resolution perpetuates inflammation in Long COVID
+T020,DRUG011,Nirmatrelvir-ritonavir,targets,BM018,Presence of spike protein in blood,moderate,clinical,PMID:35610328,viral_persistence,Paxlovid reduces viral load and may clear spike protein reservoir
+T021,DRUG004,Low-dose naltrexone,inhibits,PATH009,Microglial activation,moderate,literature,PMID:32839624,neuroinflammation,LDN blocks TLR4 on microglia reducing neuroinflammatory signaling
+T022,BM007,Increased serum tryptase level,diagnostic_of,COND004,MCAS,high,clinical,PMID:32839624,mast_cell,Serum tryptase above 11.4 ng/mL is a primary diagnostic criterion for MCAS
+T023,BM015,Increased urine histamine,diagnostic_of,COND004,MCAS,high,clinical,PMID:32839624,mast_cell,Elevated 24-hour urine histamine confirms mast cell mediator release
+T024,BM016,Increased prostaglandin D2,diagnostic_of,COND004,MCAS,high,clinical,PMID:32839624,mast_cell,Elevated urine PGD2 is a specific mast cell degranulation marker
+T025,COND004,MCAS,has_phenotype,SYMP011,Skin flushing,high,clinical,PMID:32839624,mast_cell,Episodic flushing is driven by histamine and prostaglandin release from mast cells
+T026,COND004,MCAS,has_phenotype,SYMP006,GI dysmotility,high,clinical,PMID:32839624,mast_cell,Mast cells in the gut wall drive GI motility dysfunction and bloating
+T027,PATH003,Mast cell degranulation,produces,BM015,Increased urine histamine,high,experimental,PMID:32839624,mast_cell,Histamine is released directly from mast cell granules on degranulation
+T028,PATH003,Mast cell degranulation,produces,BM016,Increased prostaglandin D2,high,experimental,PMID:32839624,mast_cell,PGD2 is synthesized and released during mast cell activation
+T029,PATH003,Mast cell degranulation,produces,BM007,Increased serum tryptase level,high,experimental,PMID:32839624,mast_cell,Tryptase stored in mast cell granules is released on activation
+T030,GENE005,TPSAB1,associated_with,COND004,MCAS,moderate,experimental,PMID:32839624,mast_cell,TPSAB1 duplication increases baseline tryptase and MCAS susceptibility
+T031,COND004,MCAS,comorbid_with,COND001,Long COVID,high,clinical,PMID:32839624,mast_cell,MCAS is a common comorbidity in Long COVID driven by immune dysregulation
+T032,COND004,MCAS,comorbid_with,COND002,POTS,high,clinical,PMID:32839624,mast_cell,MCAS and POTS frequently co-occur in Long COVID patients
+T033,BM001,Increased IL-6 level,activates,PATH003,Mast cell degranulation,moderate,experimental,PMID:34062244,mast_cell,IL-6 lowers mast cell activation threshold increasing degranulation sensitivity
+T034,DRUG005,Cetirizine,inhibits,PATH003,Mast cell degranulation,high,clinical,,mast_cell,H1 blockade reduces downstream effects of histamine release from mast cells
+T035,DRUG006,Famotidine,inhibits,PATH003,Mast cell degranulation,high,clinical,,mast_cell,H2 blockade complements H1 blockade for full histamine pathway coverage
+T036,DRUG007,Cromolyn sodium,inhibits,PATH003,Mast cell degranulation,high,clinical,,mast_cell,Cromolyn stabilizes mast cell membranes preventing granule release
+T037,COND004,MCAS,treated_by,DRUG005,Cetirizine,high,clinical,PMID:32839624,mast_cell,H1 antihistamine is first-line treatment for MCAS symptom control
+T038,COND004,MCAS,treated_by,DRUG006,Famotidine,high,clinical,PMID:32839624,mast_cell,H2 antihistamine combined with H1 provides broader mast cell coverage
+T039,COND004,MCAS,treated_by,DRUG007,Cromolyn sodium,moderate,clinical,PMID:32839624,mast_cell,Mast cell stabilizer used when antihistamines provide incomplete control
+T040,BM010,Increased norepinephrine on standing,diagnostic_of,COND003,Hyperadrenergic POTS,high,clinical,PMID:31132863,hyperadrenergic_pots,NE greater than 600 pg/mL on standing is the diagnostic threshold for hyperadrenergic subtype
+T041,BM022,Presence of adrenergic receptor autoantibody,diagnostic_of,COND003,Hyperadrenergic POTS,high,clinical,PMID:31132863,hyperadrenergic_pots,Anti-ADRB1/ADRB2 autoantibodies are found in majority of hyperadrenergic POTS cases
+T042,BM022,Presence of adrenergic receptor autoantibody,activates,PATH006,Sympathetic nervous system activation,high,experimental,PMID:31132863,hyperadrenergic_pots,Agonistic adrenergic autoantibodies constitutively activate sympathetic signaling
+T043,PATH006,Sympathetic nervous system activation,mechanism_of,COND003,Hyperadrenergic POTS,high,experimental,PMID:31132863,hyperadrenergic_pots,Excess sympathetic activation on standing drives the hyperadrenergic POTS phenotype
+T044,GENE001,ADRB2,is_target_of,BM022,Presence of adrenergic receptor autoantibody,high,experimental,PMID:31132863,hyperadrenergic_pots,ADRB2 is the primary autoantibody target in hyperadrenergic POTS
+T045,GENE002,ADRB1,is_target_of,BM022,Presence of adrenergic receptor autoantibody,high,experimental,PMID:31132863,hyperadrenergic_pots,ADRB1 co-targeted with ADRB2 in adrenergic receptor autoantibody panel
+T046,GENE006,COMT,regulates,BM010,Increased norepinephrine on standing,moderate,experimental,,hyperadrenergic_pots,COMT variants reduce NE degradation amplifying hyperadrenergic response
+T047,COND003,Hyperadrenergic POTS,has_phenotype,SYMP005,Tachycardia,high,clinical,PMID:31132863,hyperadrenergic_pots,HR rise greater than 30 bpm on standing is the cardinal POTS symptom
+T048,COND003,Hyperadrenergic POTS,has_phenotype,SYMP003,Orthostatic intolerance,high,clinical,PMID:31132863,hyperadrenergic_pots,Orthostatic intolerance is the primary functional impairment in POTS
+T049,COND003,Hyperadrenergic POTS,is_subtype_of,COND002,POTS,high,curated,,hyperadrenergic_pots,Hyperadrenergic POTS is a mechanistically distinct subtype of POTS
+T050,COND002,POTS,comorbid_with,COND001,Long COVID,high,clinical,PMID:31132863,hyperadrenergic_pots,POTS is among the most common autonomic complications of Long COVID
+T051,BM019,Decreased HRV RMSSD,associated_with,COND002,POTS,high,clinical,PMID:33971154,hyperadrenergic_pots,Severely reduced HRV reflects autonomic nervous system dysfunction in POTS
+T052,DRUG001,Propranolol,inhibits,PATH006,Sympathetic nervous system activation,high,clinical,,hyperadrenergic_pots,Beta blockade reduces sympathetic overdrive and HR in hyperadrenergic POTS
+T053,DRUG003,Pyridostigmine,activates,PATH014,Cholinergic anti-inflammatory pathway,high,clinical,PMID:31132863,hyperadrenergic_pots,Pyridostigmine enhances cholinergic tone reducing sympathetic predominance
+T054,COND003,Hyperadrenergic POTS,treated_by,DRUG001,Propranolol,high,clinical,PMID:31132863,hyperadrenergic_pots,Beta blocker is first-line pharmacotherapy for hyperadrenergic POTS
+T055,COND003,Hyperadrenergic POTS,treated_by,DRUG003,Pyridostigmine,high,clinical,PMID:31132863,hyperadrenergic_pots,Pyridostigmine reduces HR overshoot in hyperadrenergic POTS with modest evidence
+T056,COND003,Hyperadrenergic POTS,treated_by,DRUG014,IVIG,moderate,clinical,,hyperadrenergic_pots,IVIG targets adrenergic autoantibodies in autoimmune POTS subtype
+T057,BM004,Presence of ANA,associated_with,COND001,Long COVID,high,clinical,PMID:34416124,coagulation_microclot,ANA positivity indicates systemic autoimmune activation in Long COVID
+T058,BM005,Presence of Anti-beta2GPI IgG,diagnostic_of,COND009,Antiphospholipid syndrome,high,clinical,PMID:34416124,coagulation_microclot,Anti-beta2GPI is a primary antiphospholipid antibody diagnostic of APS
+T059,BM005,Presence of Anti-beta2GPI IgG,activates,PATH005,Coagulation cascade,high,experimental,PMID:34416124,coagulation_microclot,Antiphospholipid antibodies activate coagulation by disrupting phospholipid surfaces
+T060,BM008,Increased D-dimer level,associated_with,COND001,Long COVID,high,clinical,PMID:35249063,coagulation_microclot,Elevated D-dimer reflects ongoing fibrin clot formation and degradation in Long COVID
+T061,BM009,Increased fibrinogen level,activates,PATH005,Coagulation cascade,high,experimental,PMID:35249063,coagulation_microclot,Elevated fibrinogen drives hypercoagulable state and microclot formation
+T062,BM017,Hypersensitive platelet aggregation,activates,PATH005,Coagulation cascade,high,experimental,PMID:35249063,coagulation_microclot,Hyperreactive platelets amplify coagulation cascade and microclot formation
+T063,PATH005,Coagulation cascade,mechanism_of,COND001,Long COVID,moderate,experimental,PMID:35249063,coagulation_microclot,Microclot hypothesis proposes coagulation dysfunction drives vascular symptoms in Long COVID
+T064,PATH005,Coagulation cascade,associated_with,COND009,Antiphospholipid syndrome,high,clinical,PMID:34416124,coagulation_microclot,APS is defined by pathological activation of the coagulation cascade
+T065,COND009,Antiphospholipid syndrome,comorbid_with,COND001,Long COVID,moderate,clinical,PMID:34416124,coagulation_microclot,APS-like features occur in subset of Long COVID patients with antiphospholipid antibodies
+T066,DRUG009,Nattokinase,inhibits,PATH005,Coagulation cascade,moderate,literature,,coagulation_microclot,Nattokinase degrades fibrin directly targeting microclot burden
+T067,DRUG010,Anticoagulation therapy,inhibits,PATH005,Coagulation cascade,high,clinical,,coagulation_microclot,Anticoagulants prevent clot propagation in APS and hypercoagulable Long COVID
+T068,COND009,Antiphospholipid syndrome,treated_by,DRUG010,Anticoagulation therapy,high,clinical,,coagulation_microclot,Anticoagulation is standard of care for confirmed antiphospholipid syndrome
+T069,BM011,Decreased cortisol AM level,associated_with,COND001,Long COVID,high,clinical,PMID:35487077,hpa_axis,Low AM cortisol is found in majority of Long COVID patients with severe fatigue
+T070,BM012,Decreased DHEA-S level,associated_with,COND001,Long COVID,high,clinical,PMID:35487077,hpa_axis,DHEA-S reduction parallels cortisol suppression indicating adrenal insufficiency pattern
+T071,BM011,Decreased cortisol AM level,mechanism_of,PATH007,HPA axis regulation,high,experimental,PMID:35487077,hpa_axis,Low cortisol is the functional output of disrupted HPA axis negative feedback
+T072,BM012,Decreased DHEA-S level,mechanism_of,PATH007,HPA axis regulation,high,experimental,PMID:35487077,hpa_axis,DHEA-S suppression co-occurs with cortisol reduction as HPA output marker
+T073,BM013,Decreased free T3 level,associated_with,COND001,Long COVID,moderate,clinical,PMID:34957533,hpa_axis,Low T3 syndrome occurs in post-viral states reflecting metabolic suppression
+T074,BM014,Decreased ferritin level,associated_with,COND001,Long COVID,high,clinical,PMID:34062244,hpa_axis,Low ferritin worsens fatigue HRV and autonomic function in Long COVID
+T075,PATH007,HPA axis regulation,mechanism_of,COND001,Long COVID,high,experimental,PMID:35487077,hpa_axis,HPA axis dysfunction contributes to fatigue immune dysregulation and autonomic instability
+T076,PATH007,HPA axis regulation,regulates,PATH006,Sympathetic nervous system activation,high,experimental,,hpa_axis,Cortisol normally suppresses sympathetic overdrive; HPA failure removes this brake
+T077,COND001,Long COVID,has_phenotype,SYMP004,Fatigue,high,clinical,PMID:34062244,hpa_axis,Severe unrefreshing fatigue is the most prevalent Long COVID symptom
+T078,COND001,Long COVID,has_phenotype,SYMP012,Insomnia,high,clinical,PMID:34062244,hpa_axis,Sleep disruption linked to HPA axis dysregulation and autonomic imbalance
+T079,DRUG008,Low-dose hydrocortisone,targets,PATH007,HPA axis regulation,moderate,clinical,,hpa_axis,Physiologic cortisol replacement restores HPA axis negative feedback
+T080,PATH007,HPA axis regulation,treated_by,DRUG008,Low-dose hydrocortisone,moderate,clinical,,hpa_axis,Low-dose hydrocortisone is a repurposing candidate for HPA suppression in Long COVID
+T081,BM020,Decreased VO2max day 1,associated_with,COND001,Long COVID,high,clinical,PMID:35487077,hpa_axis,Impaired VO2max reflects combined mitochondrial and autonomic dysfunction
+T082,BM021,Decreased VO2max day 2 vs day 1,diagnostic_of,COND001,Long COVID,high,clinical,PMID:35487077,hpa_axis,2-day CPET drop is the gold standard objective confirmation of PEM
+T083,BM021,Decreased VO2max day 2 vs day 1,mechanism_of,PATH008,Mitochondrial ATP synthesis,high,experimental,PMID:35487077,hpa_axis,PEM-induced VO2max drop reflects mitochondrial dysfunction and impaired energy recovery
+T084,PATH008,Mitochondrial ATP synthesis,mechanism_of,COND005,ME/CFS,high,experimental,PMID:35487077,hpa_axis,Mitochondrial dysfunction is a core proposed mechanism in ME/CFS
+T085,PATH008,Mitochondrial ATP synthesis,mechanism_of,COND001,Long COVID,high,experimental,PMID:35487077,hpa_axis,Impaired ATP synthesis underlies post-exertional energy collapse in Long COVID
+T086,COND001,Long COVID,has_phenotype,SYMP001,Post-exertional malaise,high,clinical,PMID:34062244,hpa_axis,PEM is the most functionally disabling symptom of Long COVID
+T087,PATH009,Microglial activation,mechanism_of,COND001,Long COVID,high,experimental,PMID:33971154,neuroinflammation,Neuroinflammation from microglial activation drives cognitive impairment in Long COVID
+T088,PATH011,Blood brain barrier permeability,activates,PATH009,Microglial activation,high,experimental,PMID:33971154,neuroinflammation,BBB breakdown allows peripheral cytokines to activate CNS microglia
+T089,BM001,Increased IL-6 level,activates,PATH011,Blood brain barrier permeability,high,experimental,PMID:33971154,neuroinflammation,IL-6 disrupts tight junctions in brain endothelium increasing BBB permeability
+T090,BM002,Increased TNF-alpha level,activates,PATH011,Blood brain barrier permeability,high,experimental,PMID:33971154,neuroinflammation,TNF-alpha directly disrupts BBB tight junction proteins
+T091,COND001,Long COVID,has_phenotype,SYMP002,Cognitive impairment,high,clinical,PMID:34062244,neuroinflammation,Brain fog affects over 60 percent of Long COVID patients
+T092,COND001,Long COVID,has_phenotype,SYMP009,Headache,high,clinical,PMID:34062244,neuroinflammation,Headache linked to neuroinflammation and intracranial pressure changes
+T093,PATH009,Microglial activation,has_phenotype,SYMP002,Cognitive impairment,high,experimental,PMID:33971154,neuroinflammation,Microglial activation impairs synaptic pruning and neuronal function causing brain fog
+T094,DRUG004,Low-dose naltrexone,inhibits,PATH009,Microglial activation,moderate,literature,PMID:32839624,neuroinflammation,LDN at low doses blocks TLR4 on microglia reducing neuroinflammatory activation
+T095,DRUG012,NAC,inhibits,PATH009,Microglial activation,moderate,literature,,neuroinflammation,NAC reduces oxidative stress driving microglial activation
+T096,COND001,Long COVID,treated_by,DRUG004,Low-dose naltrexone,moderate,clinical,,neuroinflammation,LDN is used off-label for neuroinflammation fatigue and pain in Long COVID
+T097,GENE007,ACE2,associated_with,COND001,Long COVID,high,experimental,PMID:35610328,viral_persistence,ACE2 downregulation after SARS-CoV-2 binding disrupts RAS and autonomic function
+T098,GENE007,ACE2,associated_with,PATH013,Renin-angiotensin system,high,experimental,,viral_persistence,ACE2 is the key regulatory enzyme in the renin-angiotensin system
+T099,PATH013,Renin-angiotensin system,regulates,PATH006,Sympathetic nervous system activation,moderate,experimental,,viral_persistence,Angiotensin II activates sympathetic nervous system; ACE2 loss amplifies this
+T100,GENE008,CHRNA7,encodes,PATH014,Cholinergic anti-inflammatory pathway,high,curated,,hyperadrenergic_pots,CHRNA7 encodes the alpha-7 nAChR mediating vagal anti-inflammatory signaling
+T101,PATH014,Cholinergic anti-inflammatory pathway,inhibits,PATH002,NF-kB inflammatory pathway,high,experimental,,hyperadrenergic_pots,Cholinergic signaling through alpha-7 nAChR inhibits NF-kB in macrophages
+T102,COND007,Dysautonomia,comorbid_with,COND001,Long COVID,high,clinical,PMID:33971154,hyperadrenergic_pots,Dysautonomia is present in majority of Long COVID patients with autonomic symptoms
+T103,COND008,Small fiber neuropathy,comorbid_with,COND001,Long COVID,moderate,clinical,,hyperadrenergic_pots,Small fiber neuropathy found in skin biopsies of Long COVID patients with autonomic symptoms
+T104,COND001,Long COVID,has_phenotype,SYMP003,Orthostatic intolerance,high,clinical,PMID:34062244,hyperadrenergic_pots,Orthostatic intolerance affects over 50 percent of Long COVID patients
+T105,COND001,Long COVID,has_phenotype,SYMP010,Temperature dysregulation,high,clinical,PMID:34062244,hyperadrenergic_pots,Temperature dysregulation is an autonomic symptom in Long COVID
+T106,COND005,ME/CFS,comorbid_with,COND001,Long COVID,high,clinical,PMID:34237774,immune_inflammation,Long COVID and ME/CFS share overlapping biology and symptom profiles
+T107,COND006,Fibromyalgia,comorbid_with,COND001,Long COVID,high,clinical,PMID:34062244,neuroinflammation,Fibromyalgia commonly develops in Long COVID patients with widespread pain
+T108,COND001,Long COVID,has_phenotype,SYMP007,Widespread pain,high,clinical,PMID:34062244,neuroinflammation,Widespread pain and allodynia linked to neuroinflammation and central sensitization
+T109,COND001,Long COVID,has_phenotype,SYMP008,Breathlessness,high,clinical,PMID:34062244,hpa_axis,Dyspnea on exertion related to impaired oxygen utilization and autonomic dysregulation
+T110,DRUG002,Ivabradine,inhibits,PATH006,Sympathetic nervous system activation,high,clinical,,hyperadrenergic_pots,Ivabradine selectively reduces heart rate without affecting blood pressure
+T111,COND002,POTS,treated_by,DRUG002,Ivabradine,moderate,clinical,,hyperadrenergic_pots,Ivabradine used when beta blockers are not tolerated in POTS
+T112,COND002,POTS,treated_by,DRUG013,Fludrocortisone,moderate,clinical,,hyperadrenergic_pots,Fludrocortisone increases blood volume in low-flow POTS subtypes
+T113,BM014,Decreased ferritin level,associated_with,SYMP004,Fatigue,high,clinical,PMID:34062244,hpa_axis,Low ferritin directly worsens fatigue severity in Long COVID independent of anemia
+T114,PATH004,Complement activation,mechanism_of,COND001,Long COVID,moderate,experimental,PMID:35249063,coagulation_microclot,Complement activation contributes to vascular damage and microclot formation in Long COVID
+T115,PATH004,Complement activation,activates,PATH005,Coagulation cascade,moderate,experimental,PMID:35249063,coagulation_microclot,Complement C5b-9 membrane attack complex activates platelets and coagulation
+T116,DRUG014,IVIG,inhibits,BM022,Presence of adrenergic receptor autoantibody,moderate,clinical,,hyperadrenergic_pots,IVIG neutralizes pathogenic adrenergic autoantibodies reducing hyperadrenergic drive
+T117,DRUG014,IVIG,inhibits,BM004,Presence of ANA,moderate,clinical,,immune_inflammation,IVIG modulates autoantibody levels through Fc receptor saturation
+T118,BM006,Decreased NK cell activity,associated_with,PATH010,T cell exhaustion,high,experimental,PMID:34237774,viral_persistence,NK cell dysfunction and T cell exhaustion co-occur in immune exhaustion phenotype
+T119,PATH010,T cell exhaustion,associated_with,BM018,Presence of spike protein in blood,moderate,experimental,PMID:35610328,viral_persistence,Viral antigen persistence drives chronic T cell stimulation and exhaustion
+T120,COND001,Long COVID,has_phenotype,SYMP005,Tachycardia,high,clinical,PMID:34062244,hyperadrenergic_pots,Resting tachycardia and positional tachycardia common in Long COVID autonomic dysfunction

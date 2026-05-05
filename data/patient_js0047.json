@@ -1,0 +1,685 @@
+{
+  "patient_id": "JS-0047",
+  "demographics": {
+    "sex": "female",
+    "age": 34,
+    "enrolled": "2023-08"
+  },
+  "diagnoses": [
+    {
+      "name": "Long COVID",
+      "id": "MONDO:0100233",
+      "confirmed": true,
+      "date_diagnosed": "2023-01",
+      "notes": "Post-acute sequelae following November 2022 SARS-CoV-2 infection"
+    },
+    {
+      "name": "Hyperadrenergic POTS",
+      "id": "MONDO:0015626",
+      "subtype": "hyperadrenergic",
+      "confirmed": true,
+      "date_diagnosed": "2023-03",
+      "notes": "Confirmed by tilt table test; HR +38 bpm, norepinephrine >600 pg/mL on standing"
+    },
+    {
+      "name": "MCAS",
+      "id": "MONDO:0600011",
+      "confirmed": true,
+      "date_diagnosed": "2023-07",
+      "notes": "Serum tryptase 14.2 ng/mL; elevated urine histamine and PGD2; episodic flushing and urticaria"
+    },
+    {
+      "name": "Fibromyalgia",
+      "id": "MONDO:0005546",
+      "confirmed": true,
+      "date_diagnosed": "2023-09",
+      "notes": "Widespread allodynia and myalgia meeting fibromyalgia criteria"
+    }
+  ],
+  "biomarkers": {
+    "elevated": [
+      {
+        "node_id": "BM001",
+        "name": "Increased IL-6 level",
+        "assessed_biomarker_entity": "IL-6",
+        "assessed_biomarker_entity_id": "UniProt:P05231",
+        "assessed_entity_type": "protein",
+        "reporting_term": "increased",
+        "aspect_term": "level",
+        "value": 18.4,
+        "unit": "pg/mL",
+        "ref_high": 7.0,
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "monitoring biomarker",
+        "loinc_code": "LOINC:26881-3",
+        "date_collected": "2024-11-03",
+        "fold_above_ref": 2.63
+      },
+      {
+        "node_id": "BM002",
+        "name": "Increased TNF-alpha level",
+        "assessed_biomarker_entity": "TNF-alpha",
+        "assessed_biomarker_entity_id": "UniProt:P01375",
+        "assessed_entity_type": "protein",
+        "reporting_term": "increased",
+        "aspect_term": "level",
+        "value": 22.1,
+        "unit": "pg/mL",
+        "ref_high": 15.0,
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "monitoring biomarker",
+        "loinc_code": "LOINC:83519-2",
+        "date_collected": "2024-11-03",
+        "fold_above_ref": 1.47
+      },
+      {
+        "node_id": "BM003",
+        "name": "Increased hsCRP level",
+        "assessed_biomarker_entity": "CRP",
+        "assessed_biomarker_entity_id": "UniProt:P02741",
+        "assessed_entity_type": "protein",
+        "reporting_term": "increased",
+        "aspect_term": "level",
+        "value": 4.2,
+        "unit": "mg/L",
+        "ref_high": 3.0,
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "monitoring biomarker",
+        "loinc_code": "LOINC:30522-7",
+        "date_collected": "2024-11-03",
+        "fold_above_ref": 1.4
+      },
+      {
+        "node_id": "BM004",
+        "name": "Presence of ANA",
+        "assessed_biomarker_entity": "ANA",
+        "assessed_entity_type": "antibody",
+        "reporting_term": "presence of",
+        "aspect_term": "level",
+        "value": "1:160",
+        "ref": "negative",
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "diagnostic biomarker",
+        "loinc_code": "LOINC:5048-4",
+        "date_collected": "2024-11-03"
+      },
+      {
+        "node_id": "BM005",
+        "name": "Presence of Anti-beta2GPI IgG",
+        "assessed_biomarker_entity": "Anti-beta2GPI IgG",
+        "assessed_entity_type": "antibody",
+        "reporting_term": "presence of",
+        "aspect_term": "level",
+        "value": "positive",
+        "ref": "negative",
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "diagnostic biomarker",
+        "loinc_code": "LOINC:32218-4",
+        "date_collected": "2024-11-03"
+      },
+      {
+        "node_id": "BM007",
+        "name": "Increased serum tryptase level",
+        "assessed_biomarker_entity": "Tryptase",
+        "assessed_biomarker_entity_id": "UniProt:Q15661",
+        "assessed_entity_type": "protein",
+        "reporting_term": "increased",
+        "aspect_term": "level",
+        "value": 14.2,
+        "unit": "ng/mL",
+        "ref_high": 11.4,
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "diagnostic biomarker",
+        "loinc_code": "LOINC:25974-6",
+        "date_collected": "2024-11-03",
+        "fold_above_ref": 1.25
+      },
+      {
+        "node_id": "BM008",
+        "name": "Increased D-dimer level",
+        "assessed_biomarker_entity": "D-dimer",
+        "assessed_entity_type": "protein",
+        "reporting_term": "increased",
+        "aspect_term": "level",
+        "value": 0.8,
+        "unit": "ug/mL",
+        "ref_high": 0.5,
+        "specimen": "plasma",
+        "specimen_id": "UBERON:0001969",
+        "best_biomarker_role": "monitoring biomarker",
+        "loinc_code": "LOINC:48065-7",
+        "date_collected": "2024-11-03",
+        "fold_above_ref": 1.6
+      },
+      {
+        "node_id": "BM009",
+        "name": "Increased fibrinogen level",
+        "assessed_biomarker_entity": "Fibrinogen",
+        "assessed_biomarker_entity_id": "UniProt:P02671",
+        "assessed_entity_type": "protein",
+        "reporting_term": "increased",
+        "aspect_term": "level",
+        "value": 420,
+        "unit": "mg/dL",
+        "ref_high": 400,
+        "specimen": "plasma",
+        "specimen_id": "UBERON:0001969",
+        "best_biomarker_role": "monitoring biomarker",
+        "loinc_code": "LOINC:3255-7",
+        "date_collected": "2024-11-03",
+        "fold_above_ref": 1.05
+      },
+      {
+        "node_id": "BM010",
+        "name": "Increased norepinephrine on standing",
+        "assessed_biomarker_entity": "Norepinephrine",
+        "assessed_biomarker_entity_id": "CHEBI:33569",
+        "assessed_entity_type": "metabolite",
+        "reporting_term": "increased",
+        "aspect_term": "level",
+        "value": 890,
+        "unit": "pg/mL",
+        "ref_high": 600,
+        "specimen": "plasma",
+        "specimen_id": "UBERON:0001969",
+        "best_biomarker_role": "diagnostic biomarker",
+        "loinc_code": "LOINC:2671-5",
+        "date_collected": "2024-11-03",
+        "fold_above_ref": 1.48,
+        "notes": "Supine NE was 180 pg/mL (normal); standing NE 890 pg/mL confirms hyperadrenergic subtype"
+      },
+      {
+        "node_id": "BM015",
+        "name": "Increased urine histamine",
+        "assessed_biomarker_entity": "Histamine",
+        "assessed_biomarker_entity_id": "CHEBI:18295",
+        "assessed_entity_type": "metabolite",
+        "reporting_term": "increased",
+        "aspect_term": "level",
+        "value": "elevated",
+        "ref": "normal",
+        "specimen": "urine",
+        "specimen_id": "UBERON:0001088",
+        "best_biomarker_role": "diagnostic biomarker",
+        "loinc_code": "LOINC:2110-4",
+        "date_collected": "2024-11-03"
+      },
+      {
+        "node_id": "BM016",
+        "name": "Increased prostaglandin D2",
+        "assessed_biomarker_entity": "Prostaglandin D2",
+        "assessed_biomarker_entity_id": "CHEBI:15555",
+        "assessed_entity_type": "metabolite",
+        "reporting_term": "increased",
+        "aspect_term": "level",
+        "value": "elevated",
+        "ref": "normal",
+        "specimen": "urine",
+        "specimen_id": "UBERON:0001088",
+        "best_biomarker_role": "diagnostic biomarker",
+        "loinc_code": "LOINC:32316-6",
+        "date_collected": "2024-11-03"
+      },
+      {
+        "node_id": "BM017",
+        "name": "Hypersensitive platelet aggregation",
+        "assessed_biomarker_entity": "Platelet",
+        "assessed_biomarker_entity_id": "CL:0000233",
+        "assessed_entity_type": "cell",
+        "reporting_term": "increased",
+        "aspect_term": "aggregation activity",
+        "value": "hypersensitive",
+        "ref": "normal",
+        "specimen": "blood",
+        "specimen_id": "UBERON:0000178",
+        "best_biomarker_role": "diagnostic biomarker",
+        "date_collected": "2024-11-03"
+      },
+      {
+        "node_id": "BM022",
+        "name": "Presence of adrenergic receptor autoantibody",
+        "assessed_biomarker_entity": "Anti-ADRB1/ADRB2 IgG",
+        "assessed_entity_type": "antibody",
+        "reporting_term": "presence of",
+        "aspect_term": "level",
+        "value": "positive",
+        "ref": "negative",
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "diagnostic biomarker",
+        "date_collected": "2024-11-03",
+        "notes": "Pending Charite panel; clinical suspicion based on hyperadrenergic subtype"
+      }
+    ],
+    "low": [
+      {
+        "node_id": "BM006",
+        "name": "Decreased NK cell activity",
+        "assessed_biomarker_entity": "NK cell",
+        "assessed_biomarker_entity_id": "CL:0000623",
+        "assessed_entity_type": "cell",
+        "reporting_term": "decreased",
+        "aspect_term": "activity",
+        "value": 12,
+        "unit": "%",
+        "ref_low": 20,
+        "specimen": "blood",
+        "specimen_id": "UBERON:0000178",
+        "best_biomarker_role": "diagnostic biomarker",
+        "loinc_code": "LOINC:49089-0",
+        "date_collected": "2024-11-03",
+        "fold_below_ref": 1.67
+      },
+      {
+        "node_id": "BM011",
+        "name": "Decreased cortisol AM level",
+        "assessed_biomarker_entity": "Cortisol",
+        "assessed_biomarker_entity_id": "CHEBI:17650",
+        "assessed_entity_type": "metabolite",
+        "reporting_term": "decreased",
+        "aspect_term": "level",
+        "value": 7.1,
+        "unit": "ug/dL",
+        "ref_low": 10.0,
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "monitoring biomarker",
+        "loinc_code": "LOINC:2143-5",
+        "date_collected": "2024-11-03",
+        "fold_below_ref": 1.41
+      },
+      {
+        "node_id": "BM012",
+        "name": "Decreased DHEA-S level",
+        "assessed_biomarker_entity": "DHEA-S",
+        "assessed_biomarker_entity_id": "CHEBI:16814",
+        "assessed_entity_type": "metabolite",
+        "reporting_term": "decreased",
+        "aspect_term": "level",
+        "value": 54,
+        "unit": "ug/dL",
+        "ref_low": 98,
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "monitoring biomarker",
+        "loinc_code": "LOINC:2191-4",
+        "date_collected": "2024-11-03",
+        "fold_below_ref": 1.81
+      },
+      {
+        "node_id": "BM013",
+        "name": "Decreased free T3 level",
+        "assessed_biomarker_entity": "Free T3",
+        "assessed_biomarker_entity_id": "CHEBI:18258",
+        "assessed_entity_type": "metabolite",
+        "reporting_term": "decreased",
+        "aspect_term": "level",
+        "value": 2.1,
+        "unit": "pg/mL",
+        "ref_low": 2.3,
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "monitoring biomarker",
+        "loinc_code": "LOINC:3051-0",
+        "date_collected": "2024-11-03",
+        "fold_below_ref": 1.1
+      },
+      {
+        "node_id": "BM014",
+        "name": "Decreased ferritin level",
+        "assessed_biomarker_entity": "Ferritin",
+        "assessed_biomarker_entity_id": "UniProt:P02794",
+        "assessed_entity_type": "protein",
+        "reporting_term": "decreased",
+        "aspect_term": "level",
+        "value": 11,
+        "unit": "ng/mL",
+        "ref_low": 20,
+        "specimen": "serum",
+        "specimen_id": "UBERON:0001977",
+        "best_biomarker_role": "risk biomarker",
+        "loinc_code": "LOINC:2276-4",
+        "date_collected": "2024-11-03",
+        "fold_below_ref": 1.82
+      }
+    ]
+  },
+  "functional_tests": [
+    {
+      "test_name": "NASA lean test",
+      "date": "2024-03-15",
+      "result": "HR +42 bpm at 7 min",
+      "interpretation": "POTS_confirmed",
+      "node_ids_triggered": ["BM019"],
+      "notes": "Diagnostic threshold is HR +30 bpm; patient exceeded at +42 bpm"
+    },
+    {
+      "test_name": "HRV RMSSD",
+      "date": "2024-11-03",
+      "node_id": "BM019",
+      "assessed_biomarker_entity": "HRV RMSSD",
+      "assessed_entity_type": "functional",
+      "reporting_term": "decreased",
+      "aspect_term": "RMSSD value",
+      "value": 14,
+      "unit": "ms",
+      "ref_low": 30,
+      "specimen": "wearable",
+      "specimen_id": "UBERON:0000948",
+      "best_biomarker_role": "monitoring biomarker",
+      "interpretation": "severely_reduced",
+      "notes": "Healthy age-matched reference typically 30-60 ms"
+    },
+    {
+      "test_name": "Tilt table test",
+      "date": "2023-03-10",
+      "result": "HR +38 bpm, BP stable",
+      "interpretation": "hyperadrenergic_POTS_confirmed",
+      "notes": "BP stability with HR surge is characteristic of hyperadrenergic subtype; NE >600 pg/mL on standing confirmed separately"
+    },
+    {
+      "test_name": "2-day CPET day 1",
+      "date": "2024-04-08",
+      "node_id": "BM020",
+      "assessed_biomarker_entity": "VO2max",
+      "assessed_entity_type": "functional",
+      "reporting_term": "decreased",
+      "aspect_term": "oxygen consumption",
+      "value": 14.2,
+      "unit": "mL/kg/min",
+      "ref_low": 25.0,
+      "specimen": "exhaled air",
+      "specimen_id": "UBERON:0001078",
+      "best_biomarker_role": "diagnostic biomarker",
+      "interpretation": "severely_impaired",
+      "notes": "Age-sex predicted VO2max approximately 38 mL/kg/min; patient at 37% of predicted"
+    },
+    {
+      "test_name": "2-day CPET day 2 drop",
+      "date": "2024-04-09",
+      "node_id": "BM021",
+      "assessed_biomarker_entity": "VO2max day 2",
+      "assessed_entity_type": "functional",
+      "reporting_term": "decreased",
+      "aspect_term": "oxygen consumption",
+      "value": -31,
+      "unit": "%",
+      "ref": "less than -10% is abnormal",
+      "specimen": "exhaled air",
+      "specimen_id": "UBERON:0001078",
+      "best_biomarker_role": "diagnostic biomarker",
+      "interpretation": "PEM_confirmed",
+      "notes": "Day 2 VO2max dropped 31% from day 1; gold standard PEM confirmation"
+    },
+    {
+      "test_name": "Cognitive testing MoCA",
+      "date": "2024-11-03",
+      "value": 22,
+      "unit": "out of 30",
+      "ref_low": 26,
+      "interpretation": "mild_impairment",
+      "notes": "Score below 26 indicates mild cognitive impairment; consistent with brain fog phenotype"
+    }
+  ],
+  "symptoms": [
+    {
+      "node_id": "SYMP001",
+      "name": "Post-exertional malaise",
+      "id": "HP:0025406",
+      "severity": "severe",
+      "domain": "autonomic",
+      "onset_trigger": "less than 5 min exertion",
+      "notes": "Crash onset 12-24 hours post-exertion; lasts 2-5 days"
+    },
+    {
+      "node_id": "SYMP002",
+      "name": "Cognitive impairment",
+      "id": "HP:0100543",
+      "severity": "severe",
+      "domain": "cognitive",
+      "notes": "Word finding difficulty, short-term memory loss, inability to read for more than 10 min"
+    },
+    {
+      "node_id": "SYMP003",
+      "name": "Orthostatic intolerance",
+      "id": "HP:0031843",
+      "severity": "severe",
+      "domain": "autonomic",
+      "notes": "Cannot stand for more than 5 minutes without symptoms; must lie down"
+    },
+    {
+      "node_id": "SYMP004",
+      "name": "Fatigue",
+      "id": "HP:0012378",
+      "severity": "moderate",
+      "domain": "metabolic",
+      "notes": "Unrefreshing sleep; wakes as tired as when going to bed"
+    },
+    {
+      "node_id": "SYMP005",
+      "name": "Tachycardia",
+      "id": "HP:0001649",
+      "severity": "moderate",
+      "domain": "autonomic",
+      "notes": "Resting HR 95-105 bpm; rises to 140+ on standing"
+    },
+    {
+      "node_id": "SYMP006",
+      "name": "GI dysmotility",
+      "id": "HP:0002579",
+      "severity": "moderate",
+      "domain": "immune",
+      "notes": "Bloating, nausea, alternating constipation and diarrhea; worse after trigger foods"
+    },
+    {
+      "node_id": "SYMP007",
+      "name": "Widespread pain",
+      "id": "HP:0012531",
+      "severity": "moderate",
+      "domain": "musculoskeletal",
+      "notes": "Diffuse myalgia and allodynia; light touch causes pain"
+    },
+    {
+      "node_id": "SYMP008",
+      "name": "Breathlessness",
+      "id": "HP:0002094",
+      "severity": "mild",
+      "domain": "autonomic",
+      "notes": "Dyspnea on minimal exertion; walking to bathroom causes breathlessness"
+    },
+    {
+      "node_id": "SYMP009",
+      "name": "Headache",
+      "id": "HP:0002315",
+      "severity": "mild",
+      "domain": "cognitive",
+      "notes": "Daily tension-type headache; migraine episodes 2-3x per month"
+    },
+    {
+      "node_id": "SYMP010",
+      "name": "Temperature dysregulation",
+      "id": "HP:0008066",
+      "severity": "mild",
+      "domain": "autonomic",
+      "notes": "Feels cold even in warm environments; occasional heat intolerance"
+    },
+    {
+      "node_id": "SYMP011",
+      "name": "Skin flushing",
+      "id": "HP:0000995",
+      "severity": "mild",
+      "domain": "immune",
+      "notes": "Episodic facial and chest flushing; triggered by heat, exercise, alcohol, and certain foods"
+    },
+    {
+      "node_id": "SYMP012",
+      "name": "Insomnia",
+      "id": "HP:0100785",
+      "severity": "mild",
+      "domain": "cognitive",
+      "notes": "Sleep onset latency 60-90 min; frequent waking"
+    }
+  ],
+  "current_medications": [
+    {
+      "node_id": "DRUG001",
+      "name": "Propranolol",
+      "drugbank_id": "DrugBank:DB00571",
+      "dose": "10mg BID",
+      "start_date": "2023-03",
+      "response": "partial",
+      "response_notes": "HR overshoot reduced from +42 to +28 bpm on lean test; fatigue unchanged"
+    },
+    {
+      "node_id": "DRUG005",
+      "name": "Cetirizine",
+      "drugbank_id": "DrugBank:DB00341",
+      "dose": "10mg QD",
+      "start_date": "2023-07",
+      "response": "partial",
+      "response_notes": "Modest improvement in flushing frequency; GI symptoms unchanged"
+    },
+    {
+      "node_id": "DRUG006",
+      "name": "Famotidine",
+      "drugbank_id": "DrugBank:DB00927",
+      "dose": "20mg BID",
+      "start_date": "2023-07",
+      "response": "partial",
+      "response_notes": "Combined with cetirizine; GI bloating slightly improved"
+    },
+    {
+      "node_id": "DRUG004",
+      "name": "Low-dose naltrexone",
+      "drugbank_id": "DrugBank:DB01183",
+      "dose": "4.5mg QHS",
+      "start_date": "2024-06",
+      "response": "subjective_improvement",
+      "response_notes": "Subjective sleep improvement noted; inflammatory markers not yet rechecked post-LDN"
+    },
+    {
+      "node_id": "DRUG003",
+      "name": "Pyridostigmine",
+      "drugbank_id": "DrugBank:DB00545",
+      "dose": "30mg BID",
+      "start_date": "2024-09",
+      "response": "modest_improvement",
+      "response_notes": "HR overshoot on lean test reduced from +42 to +28 bpm; cognitive symptoms unchanged"
+    }
+  ],
+  "prior_treatments_no_response": [
+    {
+      "name": "Ivermectin",
+      "response": "no_response",
+      "notes": "Trialed for viral persistence hypothesis; no symptom change"
+    },
+    {
+      "name": "Nirmatrelvir-ritonavir",
+      "node_id": "DRUG011",
+      "response": "partial_brief",
+      "notes": "Partial improvement during course; symptoms returned within 2 weeks of stopping"
+    }
+  ],
+  "pending_investigations": [
+    {
+      "test": "Spike protein persistence assay",
+      "node_id_hypothesis": "BM018",
+      "rationale": "Viral reservoir hypothesis; partial Paxlovid response supports investigation",
+      "status": "ordered"
+    },
+    {
+      "test": "Mitochondrial function assay",
+      "node_id_hypothesis": "PATH008",
+      "rationale": "Energy metabolism impairment underlying PEM; ATP production capacity",
+      "status": "ordered"
+    },
+    {
+      "test": "16S gut microbiome sequencing",
+      "rationale": "Dysbiosis and gut-immune axis contribution to systemic inflammation",
+      "status": "pending_kit"
+    },
+    {
+      "test": "Small fiber neuropathy skin biopsy",
+      "node_id_hypothesis": "COND008",
+      "rationale": "Autonomic neuropathy as mechanism for POTS and temperature dysregulation",
+      "status": "scheduled"
+    },
+    {
+      "test": "Adrenergic receptor autoantibody panel",
+      "node_id_hypothesis": "BM022",
+      "rationale": "Confirm autoimmune mechanism of hyperadrenergic POTS; Charite panel",
+      "status": "ordered"
+    },
+    {
+      "test": "Post-exercise cytokine panel",
+      "node_id_hypothesis": "BM001",
+      "rationale": "Characterize immune signature of PEM; IL-6 TNF-alpha IFN-gamma pre and post exertion",
+      "status": "planned"
+    }
+  ],
+  "clinical_timeline": [
+    {
+      "date": "2022-11",
+      "event": "Acute SARS-CoV-2 infection",
+      "details": "Mild acute illness; no hospitalization. Fever fatigue anosmia x10 days."
+    },
+    {
+      "date": "2023-01",
+      "event": "Long COVID symptom onset",
+      "details": "PEM brain fog orthostatic symptoms. Unable to return to work. Standard CBC and CMP unremarkable. Dismissed initially."
+    },
+    {
+      "date": "2023-03",
+      "event": "POTS diagnosed",
+      "details": "Tilt table positive. Started propranolol 10mg BID. Partial HR response; fatigue unchanged."
+    },
+    {
+      "date": "2023-07",
+      "event": "MCAS suspected and treated",
+      "details": "Serum tryptase 14.2 ng/mL. Episodic flushing urticaria GI symptoms. H1/H2 blockers started with modest improvement in flushing."
+    },
+    {
+      "date": "2023-09",
+      "event": "Fibromyalgia diagnosed",
+      "details": "Widespread allodynia and myalgia meeting diagnostic criteria. No additional treatment initiated."
+    },
+    {
+      "date": "2023-11",
+      "event": "Extended immune panel",
+      "details": "Elevated IL-6 TNF-alpha ANA 1:160. Low NK cell activity. Anti-beta2GPI IgG positive. Referred to hematology for hypercoagulability workup."
+    },
+    {
+      "date": "2024-04",
+      "event": "2-day CPET PEM objectively confirmed",
+      "details": "Day 2 VO2max dropped 31% from day 1. Ventilatory threshold also markedly reduced. Disability documentation completed."
+    },
+    {
+      "date": "2024-06",
+      "event": "LDN initiated",
+      "details": "4.5mg QHS for neuroimmune modulation. Subjective sleep improvement noted."
+    },
+    {
+      "date": "2024-09",
+      "event": "Pyridostigmine trial started",
+      "details": "30mg BID. HR overshoot on lean test reduced from +42 to +28 bpm. Cognitive symptoms unchanged."
+    },
+    {
+      "date": "2024-11",
+      "event": "CODA enrollment and deep characterization",
+      "details": "Extended lab panel collected. Low cortisol DHEA-S ferritin confirmed. Multiple pending investigations initiated."
+    }
+  ],
+  "functional_status": {
+    "bell_scale_score": 35,
+    "bell_scale_notes": "Down from approximately 70 percent prior to Long COVID onset",
+    "work_status": "unable_to_work",
+    "pem_exertion_threshold": "less than 5 min light activity",
+    "months_since_covid_onset": 23
+  }
+}

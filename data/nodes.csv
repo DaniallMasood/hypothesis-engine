@@ -1,0 +1,83 @@
+node_id,node_type,name,biomarker_id,loinc_code,assessed_biomarker_entity,assessed_biomarker_entity_id,assessed_entity_type,reporting_term,aspect_term,specimen,specimen_id,condition,condition_id,best_biomarker_role,evidence_source,ontology_id,subtype,domain,notes
+BM001,Biomarker,Increased IL-6 level,AN6278-LC,LOINC:26881-3,IL-6,UniProt:P05231,protein,increased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,monitoring biomarker,PMID:34062244,,,immune,Elevated serum IL-6 monitors persistent immune activation in Long COVID
+BM002,Biomarker,Increased TNF-alpha level,,LOINC:83519-2,TNF-alpha,UniProt:P01375,protein,increased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,monitoring biomarker,PMID:33971154,,,immune,Elevated TNF-alpha reflects ongoing systemic inflammation in Long COVID
+BM003,Biomarker,Increased hsCRP level,,LOINC:30522-7,CRP,UniProt:P02741,protein,increased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,monitoring biomarker,PMID:34062244,,,immune,Elevated hsCRP indicates general systemic inflammation
+BM004,Biomarker,Presence of ANA,,LOINC:5048-4,ANA,,,antibody,presence of,serum,UBERON:0001977,Long COVID,MONDO:0100233,diagnostic biomarker,PMID:34416124,,,immune,ANA positivity indicates autoimmune process in Long COVID
+BM005,Biomarker,Presence of Anti-beta2GPI IgG,,LOINC:32218-4,Anti-beta2GPI IgG,,,antibody,presence of,serum,UBERON:0001977,Long COVID,MONDO:0100233,diagnostic biomarker,PMID:34416124,,,coagulation,Antiphospholipid antibody associated with hypercoagulability
+BM006,Biomarker,Decreased NK cell activity,,LOINC:49089-0,NK cell,CL:0000623,cell,decreased,activity,blood,UBERON:0000178,Long COVID,MONDO:0100233,diagnostic biomarker,PMID:34237774,,,immune,Reduced NK cell cytotoxic function diagnostic of immune exhaustion in Long COVID and ME/CFS
+BM007,Biomarker,Increased serum tryptase level,,LOINC:25974-6,Tryptase,UniProt:Q15661,protein,increased,level,serum,UBERON:0001977,MCAS,MONDO:0600011,diagnostic biomarker,PMID:32839624,,,immune,Elevated serum tryptase diagnostic of mast cell activation syndrome
+BM008,Biomarker,Increased D-dimer level,,LOINC:48065-7,D-dimer,,protein,increased,level,plasma,UBERON:0001969,Long COVID,MONDO:0100233,monitoring biomarker,PMID:35249063,,,coagulation,Elevated D-dimer monitors microclot burden and coagulation dysregulation
+BM009,Biomarker,Increased fibrinogen level,,LOINC:3255-7,Fibrinogen,UniProt:P02671,protein,increased,level,plasma,UBERON:0001969,Long COVID,MONDO:0100233,monitoring biomarker,PMID:35249063,,,coagulation,Elevated fibrinogen indicates hypercoagulable state
+BM010,Biomarker,Increased norepinephrine on standing,,LOINC:2671-5,Norepinephrine,CHEBI:33569,metabolite,increased,level,plasma,UBERON:0001969,Hyperadrenergic POTS,MONDO:0015626,diagnostic biomarker,PMID:31132863,,,autonomic,NE rise greater than 600 pg/mL on standing diagnostic of hyperadrenergic POTS subtype
+BM011,Biomarker,Decreased cortisol AM level,,LOINC:2143-5,Cortisol,CHEBI:17650,metabolite,decreased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,monitoring biomarker,PMID:35487077,,,neuroendocrine,Low morning cortisol indicates HPA axis suppression in Long COVID
+BM012,Biomarker,Decreased DHEA-S level,,LOINC:2191-4,DHEA-S,CHEBI:16814,metabolite,decreased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,monitoring biomarker,PMID:35487077,,,neuroendocrine,Low DHEA-S co-occurs with cortisol reduction in HPA axis dysfunction
+BM013,Biomarker,Decreased free T3 level,,LOINC:3051-0,Free T3,CHEBI:18258,metabolite,decreased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,monitoring biomarker,PMID:34957533,,,neuroendocrine,Low-normal free T3 reflects post-viral thyroid and metabolic suppression
+BM014,Biomarker,Decreased ferritin level,,LOINC:2276-4,Ferritin,UniProt:P02794,protein,decreased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,risk biomarker,PMID:34062244,,,metabolic,Low ferritin worsens fatigue and autonomic function; risk factor for poor recovery
+BM015,Biomarker,Increased urine histamine,,LOINC:2110-4,Histamine,CHEBI:18295,metabolite,increased,level,urine,UBERON:0001088,MCAS,MONDO:0600011,diagnostic biomarker,PMID:32839624,,,immune,Elevated urinary histamine diagnostic of mast cell mediator release
+BM016,Biomarker,Increased prostaglandin D2,,LOINC:32316-6,Prostaglandin D2,CHEBI:15555,metabolite,increased,level,urine,UBERON:0001088,MCAS,MONDO:0600011,diagnostic biomarker,PMID:32839624,,,immune,Elevated PGD2 confirms mast cell degranulation in MCAS
+BM017,Biomarker,Hypersensitive platelet aggregation,,,Platelet,CL:0000233,cell,increased,aggregation activity,blood,UBERON:0000178,Long COVID,MONDO:0100233,diagnostic biomarker,PMID:35249063,,,coagulation,Hyperactivated platelet aggregation contributes to microclot formation
+BM018,Biomarker,Presence of spike protein in blood,,,SARS-CoV-2 spike protein,,protein,presence of,plasma,UBERON:0001969,Long COVID,MONDO:0100233,diagnostic biomarker,PMID:35610328,,,immune,Persistent circulating spike antigen supports viral reservoir hypothesis,
+BM019,Biomarker,Decreased HRV RMSSD,,,HRV RMSSD,,functional,decreased,RMSSD value,wearable,UBERON:0000948,POTS,MONDO:0015626,monitoring biomarker,PMID:33971154,,,autonomic,Severely reduced HRV monitors autonomic nervous system dysfunction
+BM020,Biomarker,Decreased VO2max day 1,,,VO2max,,functional,decreased,oxygen consumption,exhaled air,UBERON:0001078,Long COVID,MONDO:0100233,diagnostic biomarker,PMID:35487077,,,metabolic,Impaired peak oxygen consumption on CPET day 1 indicates exercise intolerance
+BM021,Biomarker,Decreased VO2max day 2 vs day 1,,,VO2max day 2,,functional,decreased,oxygen consumption,exhaled air,UBERON:0001078,Long COVID,MONDO:0100233,diagnostic biomarker,PMID:35487077,,,metabolic,Day 2 CPET drop greater than 10 percent confirms post-exertional metabolic impairment
+BM022,Biomarker,Presence of adrenergic receptor autoantibody,,,Anti-ADRB1/ADRB2 IgG,,antibody,presence of,serum,UBERON:0001977,Hyperadrenergic POTS,MONDO:0015626,diagnostic biomarker,PMID:31132863,,,autonomic,Autoantibodies against beta-adrenergic receptors drive hyperadrenergic POTS subtype,
+BM023,Biomarker,Increased IL-6 level - prognostic,AN6278-PR,LOINC:26881-3,IL-6,UniProt:P05231,protein,increased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,prognostic biomarker,PMID:34062244,,,immune,Persistently elevated IL-6 prognostic for Long COVID severity and duration
+BM024,Biomarker,Increased interferon-gamma level,,LOINC:33401-5,Interferon-gamma,UniProt:P01579,protein,increased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,monitoring biomarker,PMID:34237774,,,immune,Elevated IFN-gamma monitors T cell activation in viral persistence states
+BM025,Biomarker,Decreased IL-10 level,,,IL-10,UniProt:P22301,protein,decreased,level,serum,UBERON:0001977,Long COVID,MONDO:0100233,monitoring biomarker,PMID:34237774,,,immune,Reduced anti-inflammatory IL-10 reflects failed immune resolution in Long COVID
+COND001,Condition,Long COVID,,,,,,,,,,,,,,MONDO:0100233,primary,,Post-acute sequelae of SARS-CoV-2; multisystem chronic illness
+COND002,Condition,POTS,,,,,,,,,,,,,,MONDO:0015626,primary,,Postural orthostatic tachycardia syndrome
+COND003,Condition,Hyperadrenergic POTS,,,,,,,,,,,,,,MONDO:0015626,subtype,,POTS subtype with excess norepinephrine on standing; adrenergic autoantibody driven
+COND004,Condition,MCAS,,,,,,,,,,,,,,MONDO:0600011,primary,,Mast cell activation syndrome; episodic mediator release
+COND005,Condition,ME/CFS,,,,,,,,,,,,,,MONDO:0005404,comorbidity,,Myalgic encephalomyelitis chronic fatigue syndrome; overlapping biology with Long COVID
+COND006,Condition,Fibromyalgia,,,,,,,,,,,,,,MONDO:0005546,comorbidity,,Widespread pain condition comorbid with Long COVID
+COND007,Condition,Dysautonomia,,,,,,,,,,,,,,MONDO:0015071,primary,,Autonomic nervous system dysfunction; umbrella condition
+COND008,Condition,Small fiber neuropathy,,,,,,,,,,,,,,MONDO:0018482,comorbidity,,Peripheral autonomic nerve damage; common in Long COVID
+COND009,Condition,Antiphospholipid syndrome,,,,,,,,,,,,,,MONDO:0007526,comorbidity,,Autoimmune hypercoagulable state; overlapping features in Long COVID
+PATH001,Pathway,JAK-STAT signaling,,,,,,,,,,,,,,GO:0007259,,immune,Cytokine receptor signaling; activated by IL-6 and interferons
+PATH002,Pathway,NF-kB inflammatory pathway,,,,,,,,,,,,,,GO:0038061,,immune,Master regulator of inflammation; activated by TNF-alpha and IL-6
+PATH003,Pathway,Mast cell degranulation,,,,,,,,,,,,,,GO:0043303,,immune,Release of histamine tryptase and prostaglandins from mast cells
+PATH004,Pathway,Complement activation,,,,,,,,,,,,,,GO:0006957,,immune,Innate immune amplification; implicated in Long COVID vascular damage
+PATH005,Pathway,Coagulation cascade,,,,,,,,,,,,,,GO:0007596,,coagulation,Clotting factor activation; dysregulated in Long COVID microclot hypothesis
+PATH006,Pathway,Sympathetic nervous system activation,,,,,,,,,,,,,,GO:0051774,,autonomic,Adrenergic signaling; overactivated in hyperadrenergic POTS
+PATH007,Pathway,HPA axis regulation,,,,,,,,,,,,,,GO:0031644,,neuroendocrine,Hypothalamic-pituitary-adrenal stress response axis
+PATH008,Pathway,Mitochondrial ATP synthesis,,,,,,,,,,,,,,GO:0006119,,metabolic,Cellular energy production; impaired in ME/CFS and Long COVID PEM
+PATH009,Pathway,Microglial activation,,,,,,,,,,,,,,GO:0001774,,immune,CNS innate immune response; drives neuroinflammation and brain fog
+PATH010,Pathway,T cell exhaustion,,,,,,,,,,,,,,GO:0097011,,immune,Chronic antigen stimulation leads to dysfunctional T cells
+PATH011,Pathway,Blood brain barrier permeability,,,,,,,,,,,,,,GO:0150104,,immune,Tight junction disruption allows neuroinflammatory mediators into CNS
+PATH012,Pathway,Nitric oxide signaling,,,,,,,,,,,,,,GO:0007263,,autonomic,Vascular tone regulation; impaired in dysautonomia
+PATH013,Pathway,Renin-angiotensin system,,,,,,,,,,,,,,GO:0002003,,autonomic,Blood pressure regulation; ACE2 receptor involved in SARS-CoV-2 entry
+PATH014,Pathway,Cholinergic anti-inflammatory pathway,,,,,,,,,,,,,,GO:0019229,,autonomic,Vagal nerve anti-inflammatory signaling; impaired in autonomic dysfunction
+GENE001,Gene,ADRB2,,,,,,,,,,,,,,HGNC:286,,autonomic,Beta-2 adrenergic receptor; autoantibody target in hyperadrenergic POTS
+GENE002,Gene,ADRB1,,,,,,,,,,,,,,HGNC:285,,autonomic,Beta-1 adrenergic receptor; autoantibody target in POTS
+GENE003,Gene,TNFA,,,,,,,,,,,,,,HGNC:11892,,immune,TNF-alpha encoding gene; genetic variants associated with Long COVID severity
+GENE004,Gene,IL6,,,,,,,,,,,,,,HGNC:6018,,immune,IL-6 encoding gene; drives JAK-STAT and NF-kB activation
+GENE005,Gene,TPSAB1,,,,,,,,,,,,,,HGNC:12032,,immune,Tryptase alpha/beta 1; TPSAB1 duplication linked to elevated tryptase and MCAS
+GENE006,Gene,COMT,,,,,,,,,,,,,,HGNC:2228,,autonomic,Catechol-O-methyltransferase; degrades catecholamines; variants affect NE clearance
+GENE007,Gene,ACE2,,,,,,,,,,,,,,HGNC:13557,,immune,SARS-CoV-2 entry receptor; also regulates RAS and autonomic function
+GENE008,Gene,CHRNA7,,,,,,,,,,,,,,HGNC:1955,,autonomic,Alpha-7 nicotinic acetylcholine receptor; mediates cholinergic anti-inflammatory pathway
+DRUG001,Drug,Propranolol,,,,,,,,,,,,,,DrugBank:DB00571,beta_blocker,autonomic,Beta-adrenergic blocker; reduces HR in POTS; approved
+DRUG002,Drug,Ivabradine,,,,,,,,,,,,,,DrugBank:DB04890,HCN_blocker,autonomic,Selective heart rate reduction without BP effect; used in POTS; approved
+DRUG003,Drug,Pyridostigmine,,,,,,,,,,,,,,DrugBank:DB00545,acetylcholinesterase_inhibitor,autonomic,Mestinon; enhances cholinergic tone; reduces hyperadrenergic POTS; approved
+DRUG004,Drug,Low-dose naltrexone,,,,,,,,,,,,,,DrugBank:DB01183,opioid_antagonist,immune,LDN; modulates microglial activation and neuroinflammation; repurposing_candidate
+DRUG005,Drug,Cetirizine,,,,,,,,,,,,,,DrugBank:DB00341,H1_antihistamine,immune,H1 histamine blocker; symptom control in MCAS; approved
+DRUG006,Drug,Famotidine,,,,,,,,,,,,,,DrugBank:DB00927,H2_antihistamine,immune,H2 histamine blocker; combined with H1 in MCAS; approved
+DRUG007,Drug,Cromolyn sodium,,,,,,,,,,,,,,DrugBank:DB01003,mast_cell_stabilizer,immune,Prevents mast cell degranulation; used in MCAS; approved
+DRUG008,Drug,Low-dose hydrocortisone,,,,,,,,,,,,,,DrugBank:DB00741,corticosteroid,neuroendocrine,Physiologic cortisol replacement for HPA suppression; repurposing_candidate
+DRUG009,Drug,Nattokinase,,,,,,,,,,,,,,DrugBank:DB00000,fibrinolytic,coagulation,Fibrin-degrading enzyme; targets microclots in Long COVID; repurposing_candidate
+DRUG010,Drug,Anticoagulation therapy,,,,,,,,,,,,,,DrugBank:DB01586,anticoagulant,coagulation,Heparin or DOAC; used in antiphospholipid syndrome; approved
+DRUG011,Drug,Nirmatrelvir-ritonavir,,,,,,,,,,,,,,DrugBank:DB16234,antiviral,immune,Paxlovid; targets viral persistence hypothesis; approved
+DRUG012,Drug,NAC,,,,,,,,,,,,,,DrugBank:DB06151,antioxidant,immune,N-acetylcysteine; reduces oxidative stress and neuroinflammation; repurposing_candidate
+DRUG013,Drug,Fludrocortisone,,,,,,,,,,,,,,DrugBank:DB00687,mineralocorticoid,autonomic,Increases blood volume; used in low-flow POTS subtypes; approved
+DRUG014,Drug,IVIG,,,,,,,,,,,,,,DrugBank:DB14994,immunomodulator,immune,Intravenous immunoglobulin; targets autoantibodies in POTS and MCAS; approved
+SYMP001,Symptom,Post-exertional malaise,,,,,,,,,,,,,,HP:0025406,,autonomic,Cardinal symptom of ME/CFS and Long COVID; crash after minimal exertion
+SYMP002,Symptom,Cognitive impairment,,,,,,,,,,,,,,HP:0100543,,cognitive,Brain fog; difficulty with memory concentration and processing speed
+SYMP003,Symptom,Orthostatic intolerance,,,,,,,,,,,,,,HP:0031843,,autonomic,Inability to tolerate upright posture; worsened by standing
+SYMP004,Symptom,Fatigue,,,,,,,,,,,,,,HP:0012378,,metabolic,Severe unrefreshing fatigue not improved by rest
+SYMP005,Symptom,Tachycardia,,,,,,,,,,,,,,HP:0001649,,autonomic,Resting or positional elevated heart rate
+SYMP006,Symptom,GI dysmotility,,,,,,,,,,,,,,HP:0002579,,immune,Bloating nausea altered motility; mast cell and autonomic involvement
+SYMP007,Symptom,Widespread pain,,,,,,,,,,,,,,HP:0012531,,musculoskeletal,Allodynia and myalgia; associated with neuroinflammation and fibromyalgia
+SYMP008,Symptom,Breathlessness,,,,,,,,,,,,,,HP:0002094,,autonomic,Dyspnea on exertion; related to impaired oxygen utilization
+SYMP009,Symptom,Headache,,,,,,,,,,,,,,HP:0002315,,cognitive,Migraine-type and tension headache; associated with neuroinflammation
+SYMP010,Symptom,Temperature dysregulation,,,,,,,,,,,,,,HP:0008066,,autonomic,Inability to regulate body temperature; autonomic nervous system dysfunction
+SYMP011,Symptom,Skin flushing,,,,,,,,,,,,,,HP:0000995,,immune,Episodic flushing and urticaria; mast cell mediator release
+SYMP012,Symptom,Insomnia,,,,,,,,,,,,,,HP:0100785,,cognitive,Sleep onset difficulty; HPA axis and autonomic dysregulation
