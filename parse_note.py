@@ -10,7 +10,7 @@ from pathlib import Path
 
 import anthropic
 
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-sonnet-4-6"
 OUTPUT_PATH = Path("data/patient_parsed.json")
 
 _PROMPT = """\
