@@ -19,6 +19,13 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------------------------
+# Session state defaults
+# ---------------------------------------------------------------------------
+
+if "input_mode" not in st.session_state:
+    st.session_state["input_mode"] = "json"
+
+# ---------------------------------------------------------------------------
 # Lazy imports — keep startup fast
 # ---------------------------------------------------------------------------
 
@@ -55,28 +62,78 @@ with st.sidebar:
     st.caption("Long COVID · Biomarker KG · Claude AI")
     st.divider()
 
-    patient_file = st.selectbox(
-        "Patient record",
-        options=list(Path("data").glob("patient_*.json")),
-        format_func=lambda p: p.name,
-    )
+    tab_json, tab_note = st.tabs(["📂 Upload Patient JSON", "📝 Clinical Note"])
+
+    with tab_json:
+        json_files = sorted(Path("data").glob("patient_*.json"))
+        patient_file = st.selectbox(
+            "Patient record",
+            options=json_files,
+            format_func=lambda p: p.name,
+        )
+
+    with tab_note:
+        note_area = st.text_area(
+            "Paste clinical note",
+            placeholder=(
+                "Paste unstructured clinical note text here, or upload a .txt file below.\n\n"
+                "Try data/demo_clinical_note.txt for a sample Long COVID case."
+            ),
+            height=250,
+            key="note_textarea",
+        )
+        note_upload = st.file_uploader(
+            "Or upload .txt file", type=["txt"], key="note_uploader"
+        )
+        if st.button("Load Note", key="btn_load_note", use_container_width=True):
+            content = ""
+            if note_upload is not None:
+                content = note_upload.read().decode("utf-8")
+            elif note_area.strip():
+                content = note_area.strip()
+            if content:
+                st.session_state["input_mode"] = "note"
+                st.session_state["clinical_note"] = content
+                st.success("Clinical note loaded. Click **▶ Run** to analyze.")
+            else:
+                st.warning("No note content found. Paste text or upload a file.")
 
     api_key = st.text_input(
         "Anthropic API key",
         value=os.environ.get("ANTHROPIC_API_KEY", ""),
         type="password",
-        help="Required only for hypothesis synthesis",
+        help="Required for parsing clinical notes and hypothesis synthesis",
     )
 
     st.divider()
     run_synthesis = st.button("▶ Run Hypothesis Synthesis", type="primary", use_container_width=True)
-    st.caption("Calls Claude claude-opus-4-7 with KG context.")
+
+    if st.session_state["input_mode"] == "note" and "clinical_note" in st.session_state:
+        st.caption("Mode: **Clinical Note** — note loaded.")
+    else:
+        st.caption("Calls Claude claude-opus-4-7 with KG context.")
+
+# ---------------------------------------------------------------------------
+# Active patient path
+# ---------------------------------------------------------------------------
+
+_parsed_path = Path("data/patient_parsed.json")
+
+if (
+    st.session_state["input_mode"] == "note"
+    and _parsed_path.exists()
+):
+    patient_path = str(_parsed_path)
+elif json_files:
+    patient_path = str(patient_file) if patient_file else str(json_files[0])
+else:
+    st.error("No patient JSON files found in data/. Add a patient record to continue.")
+    st.stop()
 
 # ---------------------------------------------------------------------------
 # Load data
 # ---------------------------------------------------------------------------
 
-patient_path = str(patient_file)
 summary = _get_patient_summary(patient_path)
 signals = _get_signals(patient_path)
 G = _get_graph()
@@ -87,10 +144,13 @@ G = _get_graph()
 
 st.title(f"Patient {summary['patient_id']}")
 demo = summary["demographics"]
+bell = summary["functional_status"].get("bell_scale_score") or "?"
+months = summary["functional_status"].get("months_since_covid_onset") or "?"
+
 col_a, col_b, col_c, col_d = st.columns(4)
 col_a.metric("Age / Sex", f"{demo.get('age')} / {demo.get('sex', '').capitalize()}")
-col_b.metric("Bell Scale", f"{summary['functional_status'].get('bell_scale_score', '?')}/100")
-col_c.metric("Months post-COVID", summary["functional_status"].get("months_since_covid_onset", "?"))
+col_b.metric("Bell Scale", f"{bell}/100")
+col_c.metric("Months post-COVID", months)
 col_d.metric("Anomaly Signals", summary["signal_count"])
 
 st.divider()
@@ -127,9 +187,15 @@ with tab_overview:
             icon = severity_icon.get(symp.get("severity", "mild"), "⚪")
             st.markdown(f"- {icon} **{symp['name']}** ({symp.get('severity', '')})")
 
+        if not patient_raw.get("symptoms"):
+            st.caption("No symptom data in this record.")
+
         st.subheader("Pending Investigations")
         for inv in summary.get("pending_investigations", []):
             st.markdown(f"- `{inv.get('status', '?').upper()}` — {inv['test']}")
+
+        if not summary.get("pending_investigations"):
+            st.caption("No pending investigations listed.")
 
 # ── Knowledge Graph ────────────────────────────────────────────────────────
 with tab_kg:
@@ -176,7 +242,6 @@ with tab_signals:
 
     df = pd.DataFrame(rows)
 
-    # Colour-code direction
     def _direction_style(val):
         colors = {"elevated": "background-color:#4e1a1a", "low": "background-color:#1a2e4e",
                   "present": "background-color:#1a3e1a", "functional": "background-color:#2e2e1a"}
@@ -203,16 +268,50 @@ with tab_hypothesis:
             st.error("Please enter an Anthropic API key in the sidebar.")
         else:
             os.environ["ANTHROPIC_API_KEY"] = api_key
-            with st.spinner("Running hypothesis synthesis pipeline..."):
-                try:
-                    from run_agent import run_pipeline
-                    result = run_pipeline(patient_path)
-                    st.session_state["hypothesis_result"] = result
-                    st.success("Synthesis complete!")
-                except Exception as exc:
-                    st.error(f"Pipeline error: {exc}")
 
-    # Display cached result from file or session
+            if st.session_state.get("input_mode") == "note":
+                clinical_note = st.session_state.get("clinical_note", "")
+                if not clinical_note:
+                    st.error(
+                        "No clinical note loaded. "
+                        "Paste a note in the **📝 Clinical Note** tab and click **Load Note** first."
+                    )
+                else:
+                    st.write("**Step 0:** Parsing clinical note into structured format...")
+                    try:
+                        from parse_note import parse_note as _parse_note
+                        with st.spinner("Calling Claude to structure clinical note..."):
+                            parsed_patient = _parse_note(clinical_note)
+
+                        with st.expander("Parsed Patient Record", expanded=False):
+                            st.json(parsed_patient)
+
+                        # Clear summary/signal cache so next render picks up parsed data
+                        _get_patient_summary.clear()
+                        _get_signals.clear()
+
+                        with st.spinner("Running hypothesis synthesis pipeline..."):
+                            from run_agent import run_pipeline
+                            result = run_pipeline("data/patient_parsed.json")
+                            st.session_state["hypothesis_result"] = result
+                            st.success("Synthesis complete!")
+
+                    except Exception as exc:
+                        import traceback
+                        st.error(f"Error during note parsing or synthesis: {exc}")
+                        with st.expander("Traceback"):
+                            st.text(traceback.format_exc())
+            else:
+                with st.spinner("Running hypothesis synthesis pipeline..."):
+                    try:
+                        from run_agent import run_pipeline
+                        result = run_pipeline(patient_path)
+                        st.session_state["hypothesis_result"] = result
+                        st.success("Synthesis complete!")
+                    except Exception as exc:
+                        st.error(f"Pipeline error: {exc}")
+
+    # Display cached result from session or output file
     result = st.session_state.get("hypothesis_result")
     if result is None and output_file.exists():
         result = json.loads(output_file.read_text())

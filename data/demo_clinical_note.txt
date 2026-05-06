@@ -1,0 +1,70 @@
+PATIENT: Female, 29 years old
+VISIT DATE: March 2025
+REFERRING PHYSICIAN: Dr. Sarah Okafor, Autonomic Disorders Clinic
+
+CHIEF COMPLAINT:
+Persistent fatigue, post-exertional malaise, racing heart on standing, and brain fog
+for 18 months following COVID-19 infection in September 2023.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 29-year-old female who contracted COVID-19 in September 2023, confirmed
+by PCR. Initial illness was moderate — fever, cough, fatigue for 10 days. She never
+fully recovered. At approximately 6 weeks post-infection she developed orthostatic
+tachycardia (HR rising from 68 bpm supine to 122 bpm standing), severe fatigue,
+cognitive difficulties described as "thinking through fog," and episodes of flushing
+with urticaria.
+
+She reports inability to exercise without 24-48 hour relapse of symptoms. A 2-day
+CPET performed in January 2025 showed significant drop in VO2 max from Day 1 to
+Day 2 (18.2 to 13.7 mL/kg/min), confirming post-exertional malaise.
+
+Tilt table test positive for POTS criteria: HR increase >30 bpm within 10 minutes
+of upright tilt without hypotension.
+
+DIAGNOSES:
+1. Long COVID (Post-acute sequelae of SARS-CoV-2)
+2. Postural Orthostatic Tachycardia Syndrome (POTS)
+3. Suspected Mast Cell Activation Syndrome (MCAS) — pending tryptase confirmation
+4. Cognitive impairment / brain fog
+
+LABORATORY FINDINGS:
+- IL-6: 18.4 pg/mL (elevated; ref <7.0)
+- TNF-alpha: 12.1 pg/mL (elevated; ref <8.1)
+- hsCRP: 4.8 mg/L (mildly elevated; ref <3.0)
+- ANA: 1:80 speckled pattern
+- Anti-β2 glycoprotein I IgG: 22 units (borderline positive; ref <20)
+- D-dimer: 0.72 mg/L FEU (elevated; ref <0.50)
+- Serum tryptase: 14.2 ng/mL (elevated; ref <11.4)
+- Histamine (plasma): elevated at 1.8 nmol/L (ref <1.0)
+- Norepinephrine (standing): 820 pg/mL (elevated; ref <600)
+- NK cell activity: reduced at 18% (ref >25%)
+- Cortisol AM: 9.2 mcg/dL (low-normal; ref 10-20)
+- DHEA-S: 68 mcg/dL (low; ref 85-380 for age)
+- Free T3: 2.1 pg/mL (low-normal; ref 2.3-4.2)
+- Ferritin: 11 ng/mL (low; ref 15-150)
+
+FUNCTIONAL TESTS:
+- NASA Lean Test: positive (HR increase 38 bpm at 10 min)
+- HRV (RMSSD): 18 ms (reduced; ref >30 ms for age)
+- MoCA: 24/30 (mild cognitive impairment)
+- 2-day CPET: VO2 max Day 1 18.2, Day 2 13.7 mL/kg/min — confirms PEM
+
+CURRENT MEDICATIONS:
+- Propranolol 10mg twice daily (partial improvement in HR)
+- Cetirizine 10mg daily
+- Famotidine 20mg twice daily
+- Low-dose naltrexone 1.5mg nightly (started 6 weeks ago, tolerating well)
+
+PENDING WORKUP:
+- Serum tryptase repeat + 24h urine prostaglandin D2
+- Adrenergic receptor autoantibody panel (Charité protocol)
+- Mitochondrial function testing
+- Post-exercise cytokine panel
+
+CLINICAL IMPRESSION:
+Complex post-COVID syndrome with features consistent with hyperadrenergic POTS,
+evolving MCAS, immune dysregulation with low-grade inflammation, possible
+antiphospholipid activity, and HPA axis suppression. The combination of elevated
+norepinephrine on standing, positive tilt table, and adrenergic autoantibody
+panel pending suggests autoimmune etiology of autonomic dysfunction.
+PEM confirmed on 2-day CPET — mitochondrial or energetic dysfunction likely.
